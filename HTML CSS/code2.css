@@ -1,0 +1,16 @@
+footer  {
+    text-align: center;
+    background-color: midnightblue;
+    color: aquamarine;
+    font-size: medium;
+}
+.box  {
+    border: 5px solid rgb(44, 460, 196);
+    background-color: yellow;
+    text-align: center;
+    width: 400px;
+    height: 150px;
+    padding: 1px;
+    margin: 30px;
+
+}
