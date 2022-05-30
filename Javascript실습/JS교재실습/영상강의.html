@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <script>
+            var name_1 = prompt('이름을 입력해주세요')
+            function sayHello(name){
+                let msg = `Hello`;
+                if(name){
+                    msg=`Hello, ${name}`;
+                }
+                console.log(msg);
+            }
+            sayHello();
+            function showError(){
+                alert('에러가 발생했습니다. 새로고침 해주세요.');
+            }
+            showError()
+            // https://www.youtube.com/watch?v=KF6t61yuPCY&t=391s
+            // 1:00:00부터
+        </script>
+    </body>
+</html>
