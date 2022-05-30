@@ -1,0 +1,124 @@
+@font-face{
+    font-family: abster;
+    src:url(font/abster-webfont.woff) format('woff')
+}
+/* 참고 vscode에서 주석 표시 "ctrl+/" */
+/* 폰트파일 : TFF(True Type Font), OTF(Open Type Font), WOFF(Web Open Font Format) */
+/* 웹 폰트는 웹폰트 주소를 입력해야 하고 다음과 같이 불러옴. 
+@font-face  {
+    font-family: 폰트이름;
+    src=url(https://웹폰트 경로) format("폰트 포맷")
+}
+* src=source
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 전체에 해당되는 css, margin이랑 padding을 0으로 해서 꽉 차게함, box-sizing: border-box : 사용자가 보기 편하게 만듬 /링크참고,
+>> https://www.tabmode.com/homepage/box-sizing.html
+ */
+
+.container  {
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/room.jpg)
+}
+/* 크게 묶는 컨테이너
+height: 100vh vs 100%?
+높이를 꽉 차게 만든다고 생각하면 됨
+>> https://unit-15.tistory.com/16
+background linear-gradient : 배경이랑 색 정해서 투명마스크 씌운다고 생각하면 됨
+*/
+
+.container .header  {
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+넓이 높이를 적당하게 잡고
+margin 왼 오 잡아야되는데 margin 0 auto 하면 자동으로 잡아줌
+display flex 요소들을 수평으로 잡아줌
+justify 메인 축 방향으로 정렬함
+>> https://studiomeal.com/archives/197 << 설명 잘되어있음
+align-items center header부분 위에 공간 만드는 것 , 세로축 기준 중앙 배열
+*/
+
+.container .header h1 a  {
+    text-decoration: none;
+    color:white;
+    font-family: abster;
+}
+/* text decoration 텍스트라인 꾸미기 
+>> https://homzzang.com/b/css-84
+*/
+
+.container .nav ul li  {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.container .nav ul li a  {
+    text-decoration: none;
+    color:white;
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf;
+}
+/* 
+:hover color 하면 마우스를 올려놓을 때 색깔이 바뀜 
+*/
+
+.container .hero  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* 
+postion absolute로 상대위치를 잡음
+>> https://rgy0409.tistory.com/2951
+나머지 위치랑 폰트를 잡음
+*/
+
+.container .hero h2  {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p  {
+    font-size: 22px;
+}
+
+.container .hero button  {
+    background: none;
+    border: 2px solid darkseagreen;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+/* 
+background를 none으로 투명하게
+border로 테두리 잡음 
+radius로 둥글게 만들고
+outline을 없앰
+cursor pointer 없으면 more videos에 커서 올리면 I로 표시됨. 이거 있어서 손가락으로 표시되는거임.
+*/
+
+.container .hero button:hover{
+    background-color: darkslategray;
+}
